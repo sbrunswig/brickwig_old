@@ -319,3 +319,13 @@ table {
 
 td, th {
   padding: 0; }
+
+html, body {
+  height: 100%; }
+
+body {
+  color: #333;
+  font-family: "Roboto Slab", serif;
+  font-size: 1em;
+  padding: 1em;
+  text-align: center; }
