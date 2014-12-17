@@ -60,3 +60,16 @@
 // - - - - - - - - - - - - - - - - - - -
 // - - shame
 // need to add a quick fix, hack, or questionable technique?  add it here, fix it later.
+
+html,body {
+  height: 100%;
+}
+
+body {
+  color: #333;
+  font-family: "Roboto Slab", serif;
+  font-size: 1em;
+  padding: 1em;
+  text-align: center;
+}
+
