@@ -1,0 +1,21 @@
+{
+  "name": "bower-example",
+  "version": "0.0.0",
+  "authors": [
+    "author <author@example.com>"
+  ],
+  "description": "An example project using bower.",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.1"
+  }
+}
