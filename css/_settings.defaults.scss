@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    #SETTINGS-DEFAULTS
+\*------------------------------------*/
+
+/**
+ * These variables are defaults; they are required for using the rest
+ * the framework.
+ */
+
+
+// High-level base settings.
+$base-background-color:   #ffffff !default;
+$base-font-size:          16px !default;
+$base-line-height:        24px !default;
+$base-text-color:         #333333 !default;
+
+
+// Framework variables, sourced from variables defined above. 
+$base-spacing-unit:           $base-line-height;
+$base-spacing-unit--large:    round($base-spacing-unit * 2);
+$base-spacing-unit--small:    round($base-spacing-unit / 2);

@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    #BASE-TYPE
+\*------------------------------------*/
+
+/**
+ * Base settigns for type based tags.
+ */
+
+
+/**
+ * Headings 1–6.
+ */
+@include headings() {
+    @include font-weight(regular);
+    color: $color-headings;
+}
+
+/**
+ * Emboldened elements.
+ */
+a,
+strong, b,
+dt {
+    @include font-weight(bold);
+}
