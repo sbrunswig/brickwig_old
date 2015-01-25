@@ -12,12 +12,9 @@
   </script>
 
   <link rel="import" href="bower_components/font-roboto/roboto.html">
-  <link rel="import"
-    href="bower_components/core-header-panel/core-header-panel.html">
-  <link rel="import"
-    href="bower_components/core-toolbar/core-toolbar.html">
-  <link rel="import"
-    href="bower_components/paper-tabs/paper-tabs.html">
+  <link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
+  <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+  <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
   <link rel="import" href="post-list.html">
 
   <style>
@@ -77,14 +74,18 @@
     <div class="container" layout vertical center>
       <post-list show="all"></post-list>
     </div>
+
   </core-header-panel>
-  
+
   <script>
-    var tabs = document.querySelector('paper-tabs');
-    tabs.addEventListener('core-select', function() {
-      console.log("Selected: " + tabs.selected);
-    });
+  var tabs = document.querySelector('paper-tabs');
+  var list = document.querySelector('post-list');
+
+  tabs.addEventListener('core-select', function() {
+    list.show = tabs.selected;
+  });
   </script>
 </body>
 
 </html>
+
