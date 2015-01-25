@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    #BASE-LISTS
+\*------------------------------------*/
+
+/** 
+ * Base settings for li tags.
+ */
+
+
+/**
+ * Remove extra vertical spacing when nesting lists.
+ */
+li {
+    > ol,
+    > ul {
+        margin-bottom: 0;
+    }
+}

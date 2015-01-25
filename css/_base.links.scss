@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    #BASE-LINKS
+\*------------------------------------*/
+
+/**
+ * Base settings for a tag.
+ */
+
+
+a {
+    text-decoration: none;
+    color: $color-links;
+    @include attention() {
+        text-decoration: underline;
+    }
+}
