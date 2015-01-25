@@ -12,6 +12,8 @@
 
     <link rel="stylesheet" href="css/brickwig.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet" type="text/css">
+    <link rel="import" href="../bower_components/polymer/polymer.html">
+
 </head>
 
 <body>
@@ -24,6 +26,13 @@
     <li><a href="http://www.bricklink.com/store.asp?p=brickwig">Brickwig at Bricklink</a></li>
     <li><a href="http://brickwig.brickowl.com/">Brickwig at Brickowl</a></li>
 </ul>
+
+
+<polymer-element name="my-element" noscript>
+  <template>
+    <span>Hello from <b>my-element</b>. This is my Shadow DOM.</span>
+  </template>
+</polymer-element>
 
 <!---
 <div style="float:left;height:100%;width:100%;border:2px solid #ccc">
