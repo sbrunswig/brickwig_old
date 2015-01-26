@@ -12,6 +12,9 @@
   </script>
 
   <link rel="import" href="bower_components/font-roboto/roboto.html">
+  <link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
+  <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+  <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
   <link rel="import" href="post-list.html">
 
   <style>
@@ -59,6 +62,14 @@
 
   <core-header-panel>
 
+    <core-toolbar>
+
+      <paper-tabs id="tabs" selected="all" self-end>
+        <paper-tab name="all">All</paper-tab>
+        <paper-tab name="favorites">Favorites</paper-tab>
+      </paper-tabs>
+
+    </core-toolbar>
 
     <div class="container" layout vertical center>
       <post-list show="all"></post-list>
