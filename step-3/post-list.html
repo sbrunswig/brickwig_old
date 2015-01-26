@@ -12,6 +12,9 @@
     post-card {
       margin-bottom: 30px;
     }
+    img {
+      max-width: 100%;
+    }
     </style>
 
     <post-service id="service" posts="{{posts}}">
@@ -21,7 +24,7 @@
 
       <template repeat="{{post in posts}}">
         <post-card>
-          <img src="{{post.avatar}}" width="70" height="70">
+          <img src="{{post.avatar}}">
         </post-card>
       </template>
       
