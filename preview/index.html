@@ -1,0 +1,167 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../resources/styles/setup.page.css">
+	<link rel="stylesheet" href="styles/SpringCM.UI.Preview.css">
+	<style>
+
+		/* header component */
+		.header {
+			background: #cb2d8d;
+			color: #ffffff;
+			height: 100px;
+			left: 0;
+			padding: 0.5em;
+			position: fixed;
+			top: 0;
+			transition: height 500ms, background 500ms;
+			width: 100%;
+			z-index: 1;
+		}
+			.header--tiny {
+				box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);			
+				height: 40px;
+			}
+			.header__title {
+				position: absolute;
+				bottom: 0.5em;
+			}
+
+		/* layout component, where go? */
+		.layout {
+			max-width: 800px;
+			padding: 0 0.5em;
+		}
+		.layout--tall {
+			margin-top: 100px;
+		}
+
+		/* page component */
+		.page {
+			margin: 0.5em 0;
+			position: relative;
+			height: 0;
+			padding: 129.41% 0 0 0;
+			width: 100%;
+		}
+			.page__item {
+				bottom: 0;
+				display: block;
+				margin: auto;
+				max-width: 100%;
+				max-height: 100%;
+				left: 0;
+				position: absolute;
+				right: 0;
+				top: 0;
+		}
+
+		/* shadow component */
+		.shadow--z-1 {
+			box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);			
+		}		
+	</style>
+</head>
+
+<body>
+
+
+	<div class="header">
+		<div class="header__title">fannie-mae-mortgage-app.doc</div>
+	</div>
+
+	<div class="layout layout--tall">
+		<div class="layout__item">
+			<div class="page shadow--z-1">
+				<img class="page__item" src="images/spinner.svg" data-src="images/page1.png">
+			</div>
+			<div class="page shadow--z-1">
+				<img class="page__item" src="images/spinner.svg" data-src="images/page2.png">
+			</div>
+			<div class="page shadow--z-1">
+				<img class="page__item" src="images/spinner.svg" data-src="images/page3.png">
+			</div>
+			<div class="page shadow--z-1">
+				<img class="page__item" src="images/spinner.svg" data-src="images/download.jpg">
+			</div>
+			<div class="page shadow--z-1">
+				<img class="page__item" src="images/spinner.svg" data-src="images/page5.png">
+			</div>
+			<div class="page shadow--z-1">
+				<img class="page__item" src="images/spinner.svg" data-src="images/page6.png">
+			</div>
+			<div class="page shadow--z-1">
+				<img class="page__item" src="images/spinner.svg" data-src="images/page7.png">
+			</div>
+			<div class="page shadow--z-1">
+				<img class="page__item" src="images/spinner.svg" data-src="images/page8.png">
+			</div>
+		</div><!-- /layout__item -->
+	</div><!-- /layout -->
+
+
+
+	<!-- scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script>
+		;
+		(function ($) {
+			$.fn.unveil = function (threshold, callback) {
+				var $w = $(window), th = threshold || 0, retina = window.devicePixelRatio > 1, attrib = retina ? 'data-src-retina' : 'data-src', images = this, loaded;
+				this.one('unveil', function () {
+					var source = this.getAttribute(attrib);
+					source = source || this.getAttribute('data-src');
+					if (source) {
+						this.setAttribute('src', source);
+						if (typeof callback === 'function')
+							callback.call(this);
+
+					}
+				});
+				function unveil() {
+					var inview = images.filter(function () {
+						var $e = $(this);
+						if ($e.is(':hidden'))
+							return;
+						var wt = $w.scrollTop(), wb = wt + $w.height(), et = $e.offset().top, eb = et + $e.height();
+						return eb >= wt - th && et <= wb + th;
+					});
+					loaded = inview.trigger('unveil');
+					images = images.not(loaded);
+				}
+				$w.on('scroll.unveil resize.unveil lookup.unveil', unveil);
+				unveil();
+				return this;
+			};
+		}(window.jQuery || window.Zepto));
+
+		
+		$(document).ready(function () {
+			
+			$('img').unveil(1000, function () {
+				$(this).load(function () {
+					/* resize images as load to right proportion */
+					var ratioHeight = this.height;
+					var ratioWidth = $(this).parents(".page").outerWidth();
+					var ratio = (ratioHeight / ratioWidth) * 100 + '%';
+					$(this).addClass("shadow--z-1");
+					$(this).parents("div.page").css({'padding-top': ratio}).removeClass("shadow--z-1");
+				});
+			});
+		});
+
+		/* header shrink on scroll */
+		$(window).on("scroll touchmove", function () {
+			$('div.header').toggleClass('header--tiny', $(document).scrollTop() > 0);
+		});	
+
+	</script>
+
+</body>
+</html>
