@@ -17,7 +17,7 @@
 		.header {
 			background: #cb2d8d;
 			color: #ffffff;
-			height: 100px;
+			height: 40px;
 			left: 0;
 			padding: 0.5em;
 			position: fixed;
@@ -41,7 +41,7 @@
 			padding: 0 0.5em;
 		}
 		.layout--tall {
-			margin-top: 100px;
+			margin-top: 40px;
 		}
 
 		/* page component */
@@ -80,7 +80,7 @@
 		<div class="header__title">fannie-mae-mortgage-app.doc</div>
 	</div>
 
-	<div class="layout layout--tall">
+	<div class="layout">
 		<div class="layout__item">
 			<div class="page shadow--z-1">
 				<img class="page__item" src="images/spinner.svg" data-src="images/page1.png">
@@ -160,10 +160,10 @@
 			});
 		});
 
-		/* header shrink on scroll */
+		/* header shrink on scroll 
 		$(window).on("scroll touchmove", function () {
 			$('div.header').toggleClass('header--tiny', $(document).scrollTop() > 0);
-		});	
+		});	*/
 
 	</script>
 
