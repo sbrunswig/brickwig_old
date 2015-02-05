@@ -17,31 +17,15 @@
 		.header {
 			background: #cb2d8d;
 			color: #ffffff;
-			height: 100px;
-			left: 0;
+			height: 40px;
 			padding: 0.5em;
-			position: fixed;
-			top: 0;
-			transition: height 500ms, background 500ms;
 			width: 100%;
-			z-index: 1;
 		}
-			.header--tiny {
-				box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);			
-				height: 40px;
-			}
-			.header__title {
-				position: absolute;
-				bottom: 0.5em;
-			}
 
 		/* layout component, where go? */
 		.layout {
 			max-width: 800px;
 			padding: 0 0.5em;
-		}
-		.layout--tall {
-			margin-top: 100px;
 		}
 
 		/* page component */
@@ -77,13 +61,10 @@
 </head>
 
 <body>
-
-
 	<div class="header">
 		<div class="header__title">fannie-mae-mortgage-app.doc</div>
-	</div>
-
-	<div class="layout layout--tall">
+	</div>	
+	<div class="layout">
 		<div class="layout__item">
 			<div class="page page--placeholder">
 				<img class="page__item" src="images/spinner.svg" data-src="images/page1.png">
