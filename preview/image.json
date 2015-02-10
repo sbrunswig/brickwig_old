@@ -4,22 +4,22 @@ jsonCallback(
         [
             {
                 "page": "1",
-                "imageurl": "http://www.brickwig.com/preview/images/pageii01b.png",
+                "imageurl": "http://www.brickwig.com/preview/images/page1.png",
                 "imageurlS": "http://www.brickwig.com/preview/images/page5s.png"
             },
             {
                 "id": "2",
-                "imageurl": "http://www.brickwig.com/preview/images/page2b.png",
+                "imageurl": "http://www.brickwig.com/preview/images/page2.png",
                 "imageurlS": "http://www.brickwig.com/preview/images/page2s.png"
             },
             {
                 "id": "3",
-                "imageurl": "http://www.brickwig.com/preview/images/page3b.png",
+                "imageurl": "http://www.brickwig.com/preview/images/page3.png",
                 "imageurlS": "http://www.brickwig.com/preview/images/page3s.png"
             },
             {
                 "page": "4",
-                "imageurl": "http://www.brickwig.com/preview/images/page4b.png",
+                "imageurl": "http://www.brickwig.com/preview/images/page4.png",
                 "imageurlS": "http://www.brickwig.com/preview/images/page4s.png"                
             },
           
