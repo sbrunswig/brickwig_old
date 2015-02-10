@@ -15,7 +15,7 @@ jsonCallback(
             {
                 "id": "3",
                 "imageurl": "http://www.brickwig.com/preview/images/download.jpg",
-                "imageurlS": "http://www.brickwig.com/preview/images/page3s.png"
+                "imageurlS": "http://www.brickwig.com/preview/images/download.jpg"
             },
             {
                 "page": "4",
