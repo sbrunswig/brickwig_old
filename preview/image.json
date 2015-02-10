@@ -4,40 +4,25 @@ jsonCallback(
         [
             {
                 "page": "1",
-                "imageurl": "http://www.brickwig.com/preview/images/page1b.png"
+                "imageurl": "http://www.brickwig.com/preview/images/page1b.png",
+                "imageurlS": "http://www.brickwig.com/preview/images/page1s.png"
             },
             {
                 "id": "2",
-                "imageurl": "http://www.brickwig.com/preview/images/page2b.png"
+                "imageurl": "http://www.brickwig.com/preview/images/page2b.png",
+                "imageurlS": "http://www.brickwig.com/preview/images/page2s.png"
             },
             {
                 "id": "3",
-                "imageurl": "http://www.brickwig.com/preview/images/page3b.png"
+                "imageurl": "http://www.brickwig.com/preview/images/page3b.png",
+                "imageurlS": "http://www.brickwig.com/preview/images/page3s.png"
             },
             {
-                "page": "1",
-                "imageurl": "http://www.brickwig.com/preview/images/page1b.png"
+                "page": "4",
+                "imageurl": "http://www.brickwig.com/preview/images/page4b.png",
+                "imageurlS": "http://www.brickwig.com/preview/images/page4s.png"                
             },
-            {
-                "id": "2",
-                "imageurl": "http://www.brickwig.com/preview/images/page2b.png"
-            },
-            {
-                "id": "3",
-                "imageurl": "http://www.brickwig.com/preview/images/page3b.png"
-            },
-            {
-                "page": "1",
-                "imageurl": "http://www.brickwig.com/preview/images/page1b.png"
-            },
-            {
-                "id": "2",
-                "imageurl": "http://www.brickwig.com/preview/images/page2b.png"
-            },
-            {
-                "id": "3",
-                "imageurl": "http://www.brickwig.com/preview/images/page3b.png"
-            }            
+          
         ]
     }
 );
