@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="myApp">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,15 +10,17 @@
     <!--<link rel="apple-touch-icon" href="apple-touch-icon.png">-->
     <!-- Place favicon.ico in the root directory -->
 
+    <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js'></script>
+    <script src='//cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
+    <script src='//cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js'></script>
+
     <link rel="stylesheet" href="css/brickwig.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet" type="text/css">
-    <link rel="import" href="../bower_components/polymer/polymer.html">
-
 </head>
 
-<body>
+<body ng-controller="MyController">
 <h1>Welcome to Brickwig</h1>
-<p>Missing a piece from one of your sets or looking for bulk parts for a MOC, then you have come to the right place. We have parts from LEGO Star Wars to LEGO City.</p>
+<p>Missing a piece from one of your sets or looking for bulk parts for a MOC, then you have come to the right place. We have parts from LEGO City to LEGO Star Wars.</p>
 <p>Thanks for looking.</p>
 
 <p>Until our store is up and running, please check us out at the following locations:</p>
@@ -28,11 +30,70 @@
 </ul>
 
 
-<polymer-element name="my-element" noscript>
-  <template>
-    <span>Hello from <b>my-element</b>. This is my Shadow DOM.</span>
-  </template>
-</polymer-element>
+
+    <table>
+      <tr>
+          <th>LotID</th>
+          <th>Image</th>
+          <th>Part No</th>
+          <th>Description</th>
+          <th>Comments</th>
+          <th>Condition</th>
+          <th>Color Name</th>
+          <th>Qty</th>
+          <th>Price</th>
+          <th>Weight</th>
+          <th>Remarks</th>
+          <th>Category</th>
+          <th>Item Type</th>
+      </tr>
+      
+      <tr ng-repeat="inv in inventories">
+          <td>{{inv.inventory_id}}</td>
+          <td><img ng-src="http://img.bricklink.com/P/{{inv.color_id}}/{{inv.item.no}}.gif" style="width:78px;height:104px;" /></td>
+          <td>{{inv.item.no}}</td>
+          <td>{{inv.description}}</td>
+          <td>{{inv.item.name}}</td>
+          <td>{{inv.new_or_used}}</td>
+          <td>{{inv.color_name}}</td>
+          <!--
+          <td>
+            <span ng-repeat="color in colors">
+              <span ng-if="msg.COLOR == color.color_id">{{color.color_name}}</span>
+            </span>
+          </td>
+          -->
+          <td>{{inv.quantity}}</td>
+          <td>{{inv.unit_price}}</td>
+          <td></td>
+          <td>{{inv.remarks}}</td>
+          <td>{{inv.item.category_id}}</td>
+          <td>{{inv.item.type}}</td>
+      </tr>
+    </table>
+
+    
+<div class="container">
+  <div class="item">
+    <div class="item__detail">Image</div>
+    <div class="item__detail">Condition</div>
+    <div class="item__detail grow4">Description</div>  
+    <div class="item__detail nowrap">Buy</div> 
+  </div>
+  <div class="item">
+    <div class="item__detail"><img src="http://www.bricklink.com/SL/30115-1.jpg" /></div>
+    <div class="item__detail">New<br>Sealed</div>
+    <div class="item__detail grow4">30115-1 Jungle Boat polybag<br>(comments)</div>
+    <div class="item__detail nowrap">Qty: 10<br>Each: US $3.25<br>Add to cart: <input type="text" size="4"></div> 
+  </div>  
+  <div class="item">
+    <div class="item__detail"><img src="http://www.bricklink.com/SL/30264-1.jpg" /></div>
+    <div class="item__detail">New<br>Sealed</div>
+    <div class="item__detail grow4">30264-1 Frax' Phoenix Flyer polybag<br>(comments)</div>
+    <div class="item__detail nowrap">Qty: 10<br>Each: US $3.25<br>Add to cart: <input type="text" size="4"></div> 
+  </div>    
+</div>
+
 
 <!---
 <div style="float:left;height:100%;width:100%;border:2px solid #ccc">
@@ -48,6 +109,18 @@
 <p>Having problems, go to full store on bricklink: <a href="http://www.bricklink.com/store.asp?p=brickwig">go to store</a>.</p>
 -->
 
+
+
+<script>
+  var myApp = angular.module("myApp", ["firebase"]);
+
+  myApp.controller('MyController', ['$scope', '$firebase',
+    function($scope, $firebase) {
+      var inventoryData = new Firebase("https://radiant-torch-3187.firebaseio.com/INVENTORY");
+      $scope.inventories = $firebase(inventoryData).$asArray();
+    }
+  ]);
+</script>
 
 
 <!-- google analytics -->

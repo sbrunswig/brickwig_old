@@ -64,10 +64,43 @@
  * Spacing..............Micro-level spacing.
  */
 
+img {
+  max-width: 100%;
+}
+.container {
+  color: #222222;
+  line-height: 1.5em;
+  display: flex;  
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item {
+  border-bottom: 1px solid gray;
+  display: flex;
+  flex-fow: row nowrap;
+}
+
+.item__detail {
+  flex-basis: 0;
+  flex-grow: 1;
+  padding: 0.3em;
+  &:first-of-type {
+    padding-right: 1em;
+  }
+}
+
+.grow4 {
+  flex-grow: 4;
+}
+
+.nowrap {
+min-width: 150px;
+}
 
 /**
  * #SETTINGS
- */
+
 @import "settings.defaults";
 @import "settings.colors";
 @import "settings.responsive";
@@ -75,7 +108,7 @@
 
 /**
  * #TOOLS
- */
+ 
 @import "tools.functions";
 @import "tools.mixins";
 @import "tools.responsive";
@@ -83,7 +116,7 @@
 
 /**
  * #GENERIC
- */ 
+ 
 @import "generic.normalize";
 @import "generic.reset";
 @import "generic.box-sizing";
@@ -92,7 +125,7 @@
 
 /**
  * #BASE
- */
+ 
 @import "base.page";
 @import "base.headings";
 @import "base.type";
@@ -174,9 +207,10 @@ $enable-list-ui--small:   true;
 
 /**
  * #TRUMPS
- */
+ 
 @import "trumps.clearfix";
 @import "trumps.widths";
 @import "trumps.widths-responsive";
 $enable-margins: true;
 @import "trumps.spacing";
+*/
