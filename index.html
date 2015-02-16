@@ -29,49 +29,6 @@
     <li><a href="http://brickwig.brickowl.com/">Brickwig at Brickowl</a></li>
 </ul>
 
-
-
-    <table>
-      <tr>
-          <th>LotID</th>
-          <th>Image</th>
-          <th>Part No</th>
-          <th>Description</th>
-          <th>Comments</th>
-          <th>Condition</th>
-          <th>Color Name</th>
-          <th>Qty</th>
-          <th>Price</th>
-          <th>Weight</th>
-          <th>Remarks</th>
-          <th>Category</th>
-          <th>Item Type</th>
-      </tr>
-      
-      <tr ng-repeat="inv in inventories">
-          <td>{{inv.inventory_id}}</td>
-          <td><img ng-src="http://img.bricklink.com/P/{{inv.color_id}}/{{inv.item.no}}.gif" style="width:78px;height:104px;" /></td>
-          <td>{{inv.item.no}}</td>
-          <td>{{inv.description}}</td>
-          <td>{{inv.item.name}}</td>
-          <td>{{inv.new_or_used}}</td>
-          <td>{{inv.color_name}}</td>
-          <!--
-          <td>
-            <span ng-repeat="color in colors">
-              <span ng-if="msg.COLOR == color.color_id">{{color.color_name}}</span>
-            </span>
-          </td>
-          -->
-          <td>{{inv.quantity}}</td>
-          <td>{{inv.unit_price}}</td>
-          <td></td>
-          <td>{{inv.remarks}}</td>
-          <td>{{inv.item.category_id}}</td>
-          <td>{{inv.item.type}}</td>
-      </tr>
-    </table>
-
     
 <div class="container">
   <div class="item">
@@ -82,16 +39,10 @@
   </div>
   <div class="item" ng-repeat="inv in inventories">
     <div class="item__detail"><img ng-src="{{inv.item.image_url}}" /></div>
-    <div class="item__detail">New<br>Sealed</div>
-    <div class="item__detail grow4">{{inv.item.no}} Jungle Boat polybag<br>(comments)</div>
-    <div class="item__detail nowrap">Qty: {{inv.quantity}}}<br>Each: US {{inv.unit_price}}<br>Add to cart: <input type="text" size="4"></div> 
-  </div>  
-  <div class="item">
-    <div class="item__detail"><img src="http://www.bricklink.com/SL/30264-1.jpg" /></div>
-    <div class="item__detail">New<br>Sealed</div>
-    <div class="item__detail grow4">30264-1 Frax' Phoenix Flyer polybag<br>(comments)</div>
-    <div class="item__detail nowrap">Qty: 10<br>Each: US $3.25<br>Add to cart: <input type="text" size="4"></div> 
-  </div>    
+    <div class="item__detail">{{inv.new_or_used}}<br>{{inv.completeness}}</div>
+    <div class="item__detail grow4">{{inv.item.no}} {{inv.item.name}}<br>{{inv.description}}</div>
+    <div class="item__detail nowrap">Qty: {{inv.quantity}}}<br>Each: US ${{inv.unit_price}}<br>Add to cart: <input type="text" size="4"></div> 
+  </div>     
 </div>
 
 
