@@ -1,0 +1,33 @@
+@import "lib/inuit/_settings.defaults.scss";
+@import "lib/inuit/_tools.mixins.scss";
+/*------------------------------------*\
+	#TOOLS-ALIASES
+\*------------------------------------*/
+
+/**
+ * SpringCM
+ *
+ * Alias $inuit variables with our own variables that don't reference inuit.
+ */
+
+
+$spacing-unit:          $inuit-base-spacing-unit;
+$spacing-unit--small:   $inuit-base-spacing-unit--small;
+$spacing-unit--large:   $inuit-base-spacing-unit--large;
+
+$base-line-height: $inuit-base-line-height;
+$base-font-size: $inuit-base-font-size;
+
+@mixin font-size($args...) {
+	@include inuit-font-size($args...);
+}
+
+
+$breakpoints: (
+	"phone"            "screen and (max-width: 719px)",
+	"tablet"           "screen and (min-width: 720px) and (max-width: 1023px)",
+	"tablet-and-up"    "screen and (min-width: 720px)",
+	"tablet-and-down"  "screen and (max-width: 1023px)",
+	"desk"             "screen and (min-width: 1024px)",
+	"retina"           "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"
+);

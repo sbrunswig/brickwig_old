@@ -1,0 +1,44 @@
+﻿/*------------------------------------*\
+	#SETTINGS-COLORS
+\*------------------------------------*/
+
+/**
+ * SpringCM
+ *
+ * These are SpringCM's global palette colors.
+ *
+ * Usage Rules
+ * 1. All uses of colors in dependant projects should generally pull from this palette.
+ * 2. Do not use these colors directly in your css declarations.
+ *    a. Instead, create your own color palette which declares semantic $color variables.
+ *
+ * Syntax Rules
+ * 1. Define CSS hexvalue(et al) colors with name $spring-*.
+ *    a. Use all 6 characters for hexvalues.
+ * 2. When using a color, create a semantically named $color-{describe element}.
+ *    a. Do not use $spring colors directly in a CSS declaration.
+ * 3. Unless another order is specified, order by ROYGBIV, then dark to light.
+ */
+
+
+// Official Palette Colors
+// (ordered by marketting brand guidelines)
+$spring-brass: #e98824;
+$spring-gold: #f7b618;
+$spring-magenta: #d13393;
+$spring-warmred: #f15a22;
+$spring-eggplant: #511e36;
+$spring-cerulean: #3366cc;
+$spring-teal: #29bdbe;
+
+// Grays Palette
+// (ordered from dark to light)
+$spring-ink: #212121;
+$spring-graphite: #727272;
+$spring-lightgray: #dadada;
+$spring-white: #ffffff;
+
+// Extended Palette Colors
+// Additional colors needed by the application outside of the brand.
+$spring-red: #ca2d2e;
+
