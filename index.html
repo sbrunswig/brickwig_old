@@ -80,11 +80,11 @@
     <div class="item__detail grow4">Description</div>  
     <div class="item__detail nowrap">Buy</div> 
   </div>
-  <div class="item">
-    <div class="item__detail"><img src="http://www.bricklink.com/SL/30115-1.jpg" /></div>
+  <div class="item" ng-repeat="inv in inventories">
+    <div class="item__detail"><img ng-src="{{inv.item.image_url}}" /></div>
     <div class="item__detail">New<br>Sealed</div>
-    <div class="item__detail grow4">30115-1 Jungle Boat polybag<br>(comments)</div>
-    <div class="item__detail nowrap">Qty: 10<br>Each: US $3.25<br>Add to cart: <input type="text" size="4"></div> 
+    <div class="item__detail grow4">{{inv.item.no}} Jungle Boat polybag<br>(comments)</div>
+    <div class="item__detail nowrap">Qty: {{inv.quantity}}}<br>Each: US {{inv.unit_price}}<br>Add to cart: <input type="text" size="4"></div> 
   </div>  
   <div class="item">
     <div class="item__detail"><img src="http://www.bricklink.com/SL/30264-1.jpg" /></div>
