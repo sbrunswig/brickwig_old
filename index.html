@@ -115,7 +115,7 @@
 
   myApp.controller('MyController', ['$scope', '$firebase',
     function($scope, $firebase) {
-      var inventoryData = new Firebase("https://radiant-torch-3187.firebaseio.com/INVENTORY");
+      var inventoryData = new Firebase("https://radiant-torch-3187.firebaseio.com/SETS");
       $scope.inventories = $firebase(inventoryData).$asArray();
     }
   ]);
