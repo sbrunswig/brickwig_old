@@ -5,23 +5,33 @@ jsonCallback(
             {
                 "page": "1",
                 "imageurl": "http://www.brickwig.com/preview/images/page1.png",
-                "imageurlS": "http://www.brickwig.com/preview/images/page5s.png"
+                "imageurlS": "http://www.brickwig.com/preview/images/page1.png"
             },
             {
                 "id": "2",
                 "imageurl": "http://www.brickwig.com/preview/images/page2.png",
-                "imageurlS": "http://www.brickwig.com/preview/images/page2s.png"
+                "imageurlS": "http://www.brickwig.com/preview/images/page2.png"
             },
             {
                 "id": "3",
-                "imageurl": "http://www.brickwig.com/preview/images/download.jpg",
-                "imageurlS": "http://www.brickwig.com/preview/images/download.jpg"
+                "imageurl": "http://www.brickwig.com/preview/images/page3.jpg",
+                "imageurlS": "http://www.brickwig.com/preview/images/page3.jpg"
             },
             {
                 "page": "4",
                 "imageurl": "http://www.brickwig.com/preview/images/page4.png",
-                "imageurlS": "http://www.brickwig.com/preview/images/page4s.png"                
+                "imageurlS": "http://www.brickwig.com/preview/images/page4.png"                
             },
+            {
+                "page": "5",
+                "imageurl": "http://www.brickwig.com/preview/images/page5.png",
+                "imageurlS": "http://www.brickwig.com/preview/images/page5.png"                
+            },  
+            {
+                "page": "6",
+                "imageurl": "http://www.brickwig.com/preview/images/page6.png",
+                "imageurlS": "http://www.brickwig.com/preview/images/page6.png"                
+            }            
           
         ]
     }
