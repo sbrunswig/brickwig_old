@@ -1,6 +1,4 @@
 node_modules
-bower_components
-[0-9.]*/compoonents
 polymer-all
 _site
 .DS_Store
