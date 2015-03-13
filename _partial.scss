@@ -17,7 +17,9 @@
  *    a. Do not use $spring colors directly in a CSS declaration.
  * 3. Unless another order is specified, order by ROYGBIV, then dark to light.
  */
-
+html {
+	background-color: red !important;
+}
 
 // Official Palette Colors
 // (ordered by marketting brand guidelines)
