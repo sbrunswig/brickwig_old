@@ -3,7 +3,7 @@ var sass = require('gulp-sass');
 var notify = require('gulp-notify');
 
 gulp.task('styles', function() {
-  return gulp.src('css/brickwig.scss')
+  return gulp.src('scss/brickwig_news.scss')
     .pipe(sass({ style: 'expanded' }))
     .pipe(gulp.dest('css'))
     .pipe(notify({ message: 'Styles task complete' }));
