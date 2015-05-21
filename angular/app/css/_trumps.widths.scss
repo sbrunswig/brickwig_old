@@ -25,7 +25,7 @@ $widths-columns: (
 	@include media-query($alias) {
 	// Loop through each of our column sizes and generate its responsive width classes.
 		@each $widths-column in $widths-columns {
-			@include widths($widths-column, -#{$alias});
+			@include widths(u-#{$widths-column}, -#{$alias});
 		}
 	}
 }
