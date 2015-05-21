@@ -570,12 +570,8 @@ img[height] {
   align-items: flex-end; }
 
 .o-grid__item {
-  flex-basis: 20%;
   text-align: center; }
-
-@media screen and (max-width: 63.9375em) {
-  .o-grid__item {
-    flex-basis: 50%; } }
+ 
 /**
  * #COMPONENTS
  */
