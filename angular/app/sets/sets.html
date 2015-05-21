@@ -2,7 +2,7 @@
 
 Search: <input ng-model="searchText">
 <div class="o-grid">
-    <div class="o-grid__item" ng-repeat="set in sets | filter:searchText">
+    <div class="o-grid__item u-1/4 u-1/2-desk" ng-repeat="set in sets | filter:searchText">
         <div class="product">
             <div class="product__img"><img ng-src="http://www.bricklink.com/SL/{{set.item.no}}.jpg" /></div>
             <div class="product__title">{{set.item.name}}</div>
