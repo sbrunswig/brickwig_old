@@ -1,0 +1,21 @@
+[class^="icon-"], [class*=" icon-"] {
+	&:before, &:after {
+		font: {
+			family: 'exercise';
+			style: normal;
+			variant: normal;
+			weight: normal;
+		}
+		line-height: 1;
+		speak: none;
+		text-transform: none;
+	}
+}
+
+@each $icon-name, $content  in $font-icons {
+	.icon-#{ $icon-name } {
+		&:before {
+			content: $content ;
+		}
+	}		
+} 

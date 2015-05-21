@@ -1,0 +1,13 @@
+<td>
+	<h3 class="icon-<%= data.Icon %>">
+		<%= data.Name %>
+		<% if ( data.Description ) { %>
+			<span><%= data.Description %></span>
+		<% } %>
+	</h3>
+</td>
+<td><%= data.FormatDate %></td>
+<td class="select">
+	<input type="checkbox" id="<%= data.id %>" class="select-document"/>
+	<label for="<%= data.id %>">select <%= data.Name %></label>
+</td>
