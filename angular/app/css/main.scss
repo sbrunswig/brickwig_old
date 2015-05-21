@@ -1,0 +1,16 @@
+/*SETTINGS
+TOOLS
+GENERIC
+ELEMENTS
+OBJECTS
+COMPONENTS
+TRUMPS*/
+
+@import "_elements.image";
+@import "_objects.grid";
+@import "_components.product.scss";
+@import "_trumps.widths";
+
+body {
+    font-family: Arial, sans-serif;
+}

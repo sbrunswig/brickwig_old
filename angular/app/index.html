@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+
+  <ul>
+    <li><a href="index.html#/">home</a></li>
+    <li><a href="#/sets">sets</a></li>
+    <li><a href="#/minifigs">minifigs</a></li>
+    <li><a href="#/parts">parts</a></li>
+  </ul>
+
+  <div ng-view></div>
+
+  <!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.x/angular.min.js"></script>
+<script src="//cdn.firebase.com/js/client/2.2.x/firebase.js"></script>
+<script src="//cdn.firebase.com/libs/angularfire/1.0.x/angularfire.min.js"></script>
+-->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/firebase/firebase.js"></script>
+  <script src="bower_components/angularfire/dist/angularfire.js"></script>
+
+
+  <script src="app.js"></script>
+  <script src="config.js"></script>
+
+  <script src="components/firebase.utils/firebase.utils.js"></script>
+
+  <script src="sets/sets.js"></script>
+  <script src="minifigs/minifigs.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<h2>Sets</h2>
+
+Search: <input ng-model="searchText">
+<div class="o-grid">
+    <div class="o-grid__item" ng-repeat="set in sets | filter:searchText">
+        <div class="product">
+            <div class="product__img"><img ng-src="http://www.bricklink.com/SL/{{set.item.no}}.jpg" /></div>
+            <div class="product__title">{{set.item.name}}</div>
+        </div>
+    </div>
+</div>
+
+  <!--
+    <table>
+      <tr>
+          <th>LotID</th>
+          <th>Image</th>
+          <th>Part No</th>
+          <th>Description</th>
+          <th>Comments</th>
+          <th>Condition</th>
+          <th>Color Name</th>
+          <th>Qty</th>
+          <th>Price</th>
+          <th>Weight</th>
+          <th>Remarks</th>
+          <th>Category</th>
+          <th>Item Type</th>
+      </tr>
+      
+      <tr ng-repeat="set in sets | filter:searchText">
+          <td>{{set.inventory_id}}</td>
+          <td><img ng-src="http://www.bricklink.com/SL/{{set.item.no}}.jpg" style="width: 150px" /></td>
+          <td>{{set.item.no}}</td>
+          <td>{{set.description}}</td>
+          <td>{{set.item.name}}</td>
+          <td>{{set.new_or_used}}</td>
+          <td>{{set.color_name}}</td>
+          <!--
+          <td>
+            <span ng-repeat="color in colors">
+              <span ng-if="msg.COLOR == color.color_id">{{color.color_name}}</span>
+            </span>
+          </td>
+          --><!--
+          <td>{{set.quantity}}</td>
+          <td>{{set.unit_price}}</td>
+          <td>{{set.item.weight}}</td>
+          <td>{{set.remarks}}</td>
+          <td>{{set.item.category_id}}</td>
+          <td>{{set.item.type}}</td>
+      </tr>
+    </table>-->

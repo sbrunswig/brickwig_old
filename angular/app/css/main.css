@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/*SETTINGS
+TOOLS
+GENERIC
+ELEMENTS
+OBJECTS
+COMPONENTS
+TRUMPS*/
+/*------------------------------------*\
+    #IMAGES
+\*------------------------------------*/
+/**
+ * 1. Fluid images for responsive purposes.
+ * 2. Offset 'alt' text from surrounding copy.
+ * 3. Setting 'vertical-align' removes the whitespace that appears under 'img'
+ *    elements when they are dropped into a page as-is. Safer alternative to
+ *    using 'display: block;'.
+ */
+img {
+  max-width: 100%;
+  /* [1] */
+  font-style: italic;
+  /* [2] */
+  vertical-align: middle;
+  /* [3] */ }
+
+/**
+ * 1. Google Maps breaks if 'max-width: 100%' acts upon it; use their selector
+ *    to remove the effects.
+ * 2. If a 'width' and/or 'height' attribute have been explicitly defined, let’s
+ *    not make the image fluid.
+ */
+.gm-style img, img[width], img[height] {
+  /* [2] */
+  max-width: none; }
+
+/*------------------------------------*\
+    #GRID
+\*------------------------------------*/
+/**
+ * The grid object simply stacks an image on top of some text-like content.
+ */
+.o-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end; }
+
+.o-grid__item {
+  flex-basis: 20%;
+  text-align: center; }
+
+@media screen and (max-width: 63.9375em) {
+  .o-grid__item {
+    flex-basis: 50%; } }
+
+.product {
+  margin: 24px; }
+
+.product__img {
+  margin-bottom: 24px; }
+
+.product__name {
+  text-align: center; }
+
+body {
+  font-family: Arial, sans-serif; }
