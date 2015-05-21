@@ -3,19 +3,11 @@ var sass = require('gulp-sass');
 var notify = require('gulp-notify');
 
 gulp.task('styles', function() {
-  return gulp.src('scss/brickwig_news.scss')
+    gulp.src('./css/*.scss')
     .pipe(sass({ style: 'expanded' }))
-    .pipe(gulp.dest('css'))
-    .pipe(notify({ message: 'Styles task complete' }));
+    .pipe(gulp.dest('./css'))
 });
 
 gulp.task('default', function() {
     gulp.start('styles');
 });
-
-gulp.task('watch', function() {
-  	// Watch .scss files
-  	gulp.watch('css/*.scss', ['styles']);
-});
-
-
