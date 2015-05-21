@@ -13,11 +13,11 @@ $base-background-color:    #fff !default;
 
 
 // Framework variables, sourced from variables defined above.
-$base-spacing-unit:           $inuit-base-line-height;
-$base-spacing-unit--tiny:     round($inuit-base-spacing-unit * 0.25);
-$base-spacing-unit--small:    round($inuit-base-spacing-unit * 0.5);
-$base-spacing-unit--large:    round($inuit-base-spacing-unit * 2);
-$base-spacing-unit--huge:     round($inuit-base-spacing-unit * 4);
+$base-spacing-unit:           $base-line-height;
+$base-spacing-unit--tiny:     round($base-spacing-unit * 0.25);
+$base-spacing-unit--small:    round($base-spacing-unit * 0.5);
+$base-spacing-unit--large:    round($base-spacing-unit * 2);
+$base-spacing-unit--huge:     round($base-spacing-unit * 4);
 
 
 // Breakpoint aliases and conditions in a list.
