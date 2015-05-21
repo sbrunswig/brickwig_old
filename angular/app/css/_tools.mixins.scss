@@ -1,5 +1,5 @@
 /*------------------------------------*\
-	#TOOLS-MIXINS
+    #TOOLS-MIXINS
 \*------------------------------------*/
 
 /**
@@ -166,7 +166,7 @@ $widths-delimiter: \/ !global;
 
 		// If we’re trying to make wholes, just spit a 100% width utility out one time only.
 		@if ($widths-denominator == 1) {
-			.w-1#{$widths-delimiter}1#{$widths-breakpoint} {
+			.u-1#{$widths-delimiter}1#{$widths-breakpoint} {
 				width: 100% !important;
 			}
 		} @else {
