@@ -1,11 +1,18 @@
-.product {
-    margin: 24px;
+/*------------------------------------*\
+    #COMPONENTS-PRODUCT
+\*------------------------------------*/
+
+/* Product styles */
+
+
+.c-product {
+    margin: $base-spacing-unit;
 }
 
-.product__img {
-    margin-bottom: 24px;
+.c-product__img {
+    margin-bottom: $base-spacing-unit;
 }
 
-.product__name {
+.c-product__name {
     text-align: center;
 }
