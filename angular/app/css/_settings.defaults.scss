@@ -21,7 +21,7 @@ $base-spacing-unit--huge:     round($inuit-base-spacing-unit * 4);
 
 
 // Breakpoint aliases and conditions in a list.
-// Can be invoked later on via the 'media-query()' mixin found in '_tools.responsive'.
+// Can be invoked later on via the 'media-query()' mixin found in '_tools.mixins'.
 $breakpoints: (
     "phone"            "screen and (max-width: 44.9375em)",
     "tablet"           "screen and (min-width: 45em) and (max-width: 63.9375em)",
