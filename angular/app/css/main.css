@@ -583,7 +583,10 @@ img[height] {
   margin: 24px; }
 
 .c-product__img {
-  margin-bottom: 24px; }
+  height: 150px;
+  margin-bottom: 24px; 
+  width: 200px;
+  }
 
 .c-product__name {
   text-align: center; }
@@ -592,7 +595,7 @@ img[height] {
  * #TRUMPS
  */
 /*------------------------------------*\
-	#TRUMPS-WIDTHS
+    #TRUMPS-WIDTHS
 \*------------------------------------*/
 /**
  * Regular and responsive width classes based on responsive settings.
