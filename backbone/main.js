@@ -31,4 +31,3 @@ var ProfileView = Backbone.View.extend({
 var profileList = new ProfileList(startData);
 var profilesView = new ProfileView({ collection: profileList });
 profilesView.render();
-profileList.add(addData);
