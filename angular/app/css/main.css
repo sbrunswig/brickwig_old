@@ -526,7 +526,7 @@ html {
   /* [5] */ }
 
 /*------------------------------------*\
-    #IMAGES
+        #ELEMENTS.IMAGE
 \*------------------------------------*/
 /**
  * 1. Fluid images for responsive purposes.
@@ -559,7 +559,7 @@ img[height] {
  * #OBJECTS
  */
 /*------------------------------------*\
-    #GRID
+    #OBJECTS-GRID
 \*------------------------------------*/
 /**
  * Create flexbox grid system, combine with width classes.
@@ -571,12 +571,12 @@ img[height] {
 
 .o-grid__item {
   text-align: center; }
- 
+
 /**
  * #COMPONENTS
  */
 /*------------------------------------*\
-    #COMPONENTS-PRODUCT
+        #COMPONENTS-PRODUCT
 \*------------------------------------*/
 /* Product styles */
 .c-product {
@@ -584,9 +584,8 @@ img[height] {
 
 .c-product__img {
   height: 150px;
-  margin-bottom: 24px; 
-  width: 200px;
-  }
+  margin-bottom: 24px;
+  width: 200px; }
 
 .c-product__name {
   text-align: center; }
