@@ -18,7 +18,7 @@
 	    <div class="o-grid__item u-1/2 u-1/4-desk" ng-repeat="set in sets | filter:searchText">
 	        <div class="c-product">
 	            <div class="c-product__img"><img ng-src="http://www.bricklink.com/SL/.jpg" /></div>
-	            <div class="c-product__title"><%= name %></div>
+	            <div class="c-product__title"><%= set.item.name %></div>
 	        </div>
 	    </div>
 	</div>    
