@@ -1,37 +1,16 @@
 App.AppView = Backbone.View.extend({
-
-	// This would usually be fetched from the server in the view
-	// instead of manually loaded into the collection.
-	// Not setting this in external file due to avoiding 
-	// CORS isssues on different machines locally
-	documentJSON: [{"Type":"Folder","Name":"Sub Folder","Description":"Sub Folder Description","ModifiedDate":"1/21/2014 2:56 PM"},{"Type":"Folder","Name":"Test 2","Description":"","ModifiedDate":"1/21/2014 2:54 PM"},{"Type":"Folder","Name":"Test","Description":"","ModifiedDate":"1/21/2014 2:53 PM"},{"Type":"Folder","Name":"New Folder","Description":"","ModifiedDate":"1/21/2014 2:53 PM"},{"Type":"Document","Name":"Send Documents Usability.docx","Description":"Document Description","ModifiedDate":"1/21/2014 3:55 PM"},{"Type":"Document","Name":"Star Image.png","Description":"","ModifiedDate":"1/21/2014 3:45 PM"},{"Type":"Document","Name":"Coming Soon Text for Login Page.docx","Description":"","ModifiedDate":"1/21/2014 3:15 PM"},{"Type":"Document","Name":"Internationalization_Notes.pdf","Description":"","ModifiedDate":"1/21/2014 2:58 PM"},{"Type":"Document","Name":"Test Document.docx","Description":"This is a test document","ModifiedDate":"1/21/2014 2:55 PM"},{"Type":"Document","Name":"Spreadsheet.xlsx","Description":"","ModifiedDate":"1/21/2014 2:35 PM"},{"Type":"Document","Name":"Moon Image.png","Description":"","ModifiedDate":"1/21/2014 2:27 PM"},{"Type":"Document","Name":"Presentation Deck.ppt","Description":"","ModifiedDate":"1/21/2014 1:37 PM"}],
-	actionButtonJSON: [{"Name":"Upload","ImageName":"upload"},{"Name":"Create Folder","ImageName":"create_folder"},{"Name":"Share","ImageName":"share"},{"Name":"Cut","ImageName":"cut"},{"Name":"Manage Attributes","ImageName":"tag"},{"Name":"Copy","ImageName":"copy"},{"Name":"Paste","ImageName":"paste"},{"Name":"Search","ImageName":"search"},{"Name":"Folder Settings","ImageName":"folder_settings"},{"Name":"Send Email","ImageName":"send_email"}],
-
+	documentJSON: [{"MINIFIGS" : {"loc001" : {"description" : "chima guy", "weight" : "32.0"}, "loc002" : {"description" : "chima boy", "weight" : "55"} }, "SETS" : [ {"color_id" : 0, "color_name" : "(Not Applicable)", "completeness" : "X", "description" : "", "item" : {"category" : "", "category_id" : "710", "image_url" : "http://img.bricklink.com/OL/10218-1.jpg", "name" : "Pet Shop", "no" : "10218-1", "type" : "SET", "weight" : "2820.00"}, "new_or_used" : "N", "quantity" : 1, "remarks" : "", "unit_price" : "249.0000"}, {"color_id" : 0, "color_name" : "(Not Applicable)", "completeness" : "S", "description" : "", "item" : {"category" : "Legends of Chima", "category_id" : "787", "image_url" : "http://img.bricklink.com/OL/30264-1.jpg", "name" : "Frax' Phoenix Flyer polybag", "no" : "30264-1", "type" : "SET", "weight" : "23.00"}, "new_or_used" : "N", "quantity" : 10, "remarks" : "", "unit_price" : "3.5000"}, {"color_id" : 0, "color_name" : "(Not Applicable)", "completeness" : "S", "description" : "", "item" : {"category" : "", "category_id" : "34", "image_url" : "http://img.bricklink.com/OL/30230-1.jpg", "name" : "Mini Mech polybag", "no" : "30230-1", "type" : "SET", "weight" : ""}, "new_or_used" : "N", "quantity" : 10, "remarks" : "", "unit_price" : "3.5000"}, {"color_id" : 0, "color_name" : "(Not Applicable)", "completeness" : "S", "description" : "", "item" : {"category" : "Town", "category_id" : "67", "image_url" : "http://img.bricklink.com/OL/30311-1.jpg", "name" : "Swamp Police Helicopter Polybag", "no" : "30311-1", "type" : "SET", "weight" : "45.00"}, "new_or_used" : "N", "quantity" : 10, "remarks" : "", "unit_price" : "3.7500"}, {"color_id" : 0, "color_name" : "(Not Applicable)", "completeness" : "S", "description" : "", "item" : {"category" : "", "category_id" : "771", "image_url" : "http://img.bricklink.com/OL/30115-1.jpg", "name" : "Jungle Boat polybag", "no" : "30115-1", "type" : "SET", "weight" : "31.00"}, "new_or_used" : "N", "quantity" : 10, "remarks" : "S-30115", "unit_price" : "3.3000"}, {"color_id" : 0, "color_name" : "(Not Applicable)", "completeness" : "S", "description" : "", "item" : {"category" : "Friends", "category_id" : "771", "image_url" : "http://img.bricklink.com/OL/30202-1.jpg", "name" : "Smoothie Stand", "no" : "30202-1", "type" : "SET", "weight" : "28.00"}, "new_or_used" : "N", "quantity" : 10, "remarks" : "", "unit_price" : "4.9900"}, {"color_id" : 0, "color_name" : "(Not Applicable)", "completeness" : "S", "description" : "", "item" : {"category" : "Town", "category_id" : "67", "image_url" : "http://img.bricklink.com/OL/30313-1.jpg", "name" : "Garbage Truck polybag", "no" : "30313-1", "type" : "SET", "weight" : "0.00"}, "new_or_used" : "N", "quantity" : 10, "remarks" : "", "unit_price" : "6.5000"}, {"color_id" : 0, "color_name" : "(Not Applicable)", "completeness" : "S", "description" : "", "item" : {"category" : "", "category_id" : "65", "image_url" : "http://img.bricklink.com/OL/30246-1.jpg", "name" : "Imperial Shuttle polybag", "no" : "30246-1", "type" : "SET", "weight" : "43.40"}, "new_or_used" : "N", "quantity" : 1, "remarks" : "", "unit_price" : "6.0000"}, {"color_id" : 0, "color_name" : "(Not Applicable)", "completeness" : "S", "description" : "", "item" : {"category" : "", "category_id" : "67", "image_url" : "http://img.bricklink.com/OL/30226-1.jpg", "name" : "Police Helicopter polybag", "no" : "30226-1", "type" : "SET", "weight" : ""}, "new_or_used" : "N", "quantity" : 1, "remarks" : "", "unit_price" : "6.0000"}, {"color_id" : 0, "color_name" : "(Not Applicable)", "completeness" : "S", "description" : "", "item" : {"category" : "Legends of Chima", "category_id" : "787", "image_url" : "http://img.bricklink.com/OL/30265-1.jpg", "name" : "Worriz' Fire Bike polybag", "no" : "30265-1", "type" : "SET", "weight" : "31.00"}, "new_or_used" : "N", "quantity" : 1, "remarks" : "", "unit_price" : "6.0000"}, {"color_id" : 0, "color_name" : "(Not Applicable)", "completeness" : "S", "description" : "", "item" : {"category" : "Legends of Chima", "category_id" : "787", "image_url" : "http://img.bricklink.com/OL/30250-1.jpg", "name" : "Ewar's Acro-Fighter polybag", "no" : "30250-1", "type" : "SET", "weight" : "22.60"}, "new_or_used" : "N", "quantity" : 1, "remarks" : "", "unit_price" : "5.0000"}]}]
 	initialize: function() {
 		
 	},
 
 	render: function(){
-
 		var documentCollection = new App.Documents( this.documentJSON );
-		var actionButtonsCollection = new App.ActionButtons( this.actionButtonJSON );
-
-		var informationListView = new App.InformationListView({
-			documentCollection: documentCollection
-		});
-		informationListView.render();
-
 		var documentListView = new App.DocumentListView({
 			documentCollection: documentCollection
 		});
 		documentListView.render();
-
-		var actionButtonListView = new App.ActionButtonListView({
-			actionButtonsCollection: actionButtonsCollection
-		});
-		actionButtonListView.render();
-
-	}
+		}
 
 });
 
