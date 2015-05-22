@@ -583,9 +583,7 @@ img[height] {
   margin: 24px; }
 
 .c-product__img {
-  height: 150px;
-  margin-bottom: 24px;
-  width: 200px; }
+  margin-bottom: 24px; }
 
 .c-product__name {
   text-align: center; }
@@ -725,3 +723,5 @@ img[height] {
 
   .u-3\/4-desk {
     width: 75% !important; } }
+
+/*# sourceMappingURL=main.css.map */
